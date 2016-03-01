@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Getters y Setters</title>
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script>
+
+	$(document).on('ready', function(){
+
+		//si colocamos valores dentro de html() los añade a #parrafo -> Set
+		//html() nos devuelve el valor contenido en #parrafo -> Get
+		var almacen = $('#parrafo').html(); 
+		alert('Contenido de #parrafo' + almacen);
+
+		//Set de un atributo a un elemento
+		$('#prueba').attr('class', 'clase1');
+		//Get del atributo de un elemento
+		var clase = $('#prueba').attr('class');
+		alert('La clase en #prueba' + clase);
+	});
+
+	</script>
+
+</head>
+<body>
+
+<p id="parrafo"><strong>Hola JQuery</strong></p> 
+
+<p id="parrafo2"><strong>Hola JQuery 2</strong></p> 
+
+<div id="prueba">
+	Este es el DIV
+</div>
+	
+</body>
+</html>
