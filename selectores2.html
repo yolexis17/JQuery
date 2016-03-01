@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Selectores2</title>
+	<meta charset="UTF-8">
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<script>
+
+	/*Declarar variables globales*/
+		//hacer seleccion global para que sea accedida desde los metodos
+		//var seleccion;
+
+		$(document).on('ready', function(){
+		
+		$('li').text('works');
+
+		var seleccion = $('.ejem1');
+
+		if(seleccion.length)
+			console.log('Existen:' + seleccion.length + ' elementos.');
+		else
+			console.log('No existe el elemento seleccionado');
+
+		//clase no tiene
+		seleccion.not('.cl1').text('Este elemento no tiene la clase cl1');
+		//clase tiene
+		seleccion.has('span').text('Este elemento tiene un <span> en su contenido');
+		//clase first, el primero
+		$('li').first().html('<strong>Soy el elemento 1</strong>');
+		//clase eq, posicion especifica, igual que los arreglos empieza con cero 0
+		$('li').eq(2).html('<strong>Soy el tercero de la lista</strong>');
+
+
+
+		});
+
+	</script>
+
+
+</head>
+<body>
+
+	<div class="ejem1">
+		<p>Hola bebe</p>
+	</div>
+	
+<div class="ejem1 cl1">
+	<span></span>
+</div>
+
+<ul>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+
+
+
+</body>
+</html>

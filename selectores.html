@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Selectores</title>
+	<meta charset="UTF-8">
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	
+	<script>
+	$(document).on('ready', function(){
+
+		/*$('div.midiv').css({
+			'background-color':'#ffaa00',
+		});
+		//acceder a etiquetas dentro de etiquetas filtrando con la clase
+		$('div.midiv article p').text('Texto, Selectores');*/
+		$('#parrafouno, #parrafodos, span').text('IGUALES');
+
+	});
+
+	</script>
+
+
+</head>
+<body>
+
+<div class="midiv">
+	<article>
+		<p id="parrafouno">Parrafo 1</p>
+	</article>
+</div>
+	
+<div>
+	<article>
+		<p id="parrafodos">Parrafo 2</p>
+	</article>
+</div>
+
+<span></span>
+
+</body>
+</html>
+
